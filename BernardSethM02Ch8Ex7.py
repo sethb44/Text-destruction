@@ -5,16 +5,18 @@ count1 = int(0)
 count2 = int(0)
 count3 = int(0)
 count4 = int(0)
+count = int(0)
 textFile.close()
-for i in text:
-      if(i.islower()):
+while count < len(text):
+      if(text[count].islower()):
             count1 += 1
-      elif(i.isspace()):
+      elif(text[count].isspace()):
             count3 += 1
-      elif(i.isupper()):
+      elif(text[count].isupper()):
             count2 += 1
-      elif(i.isnumeric()):
+      elif(text[count].isnumeric()):
             count4 += 1
+      count += 1
 print("The number of lowercase characters is:")
 print(count1)
 print("The number of uppercase characters is:")
